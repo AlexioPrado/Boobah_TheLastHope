@@ -1,12 +1,21 @@
 @font-face {
     font-family: 'cookiefont';
-    src: url(fonts/cookie_bold.TTF) format('truetype'),
-         url(fonts/cookie_regular.TTF) format('truetype'),
-         url(fonts/cookie_Black.TTF) format('truetype');
+    src: url(fonts/cookie_bold.TTF) format('truetype');
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'cookiefont';
+    src: url(fonts/cookie_Black.TTF) format('truetype');
+    font-weight: bolder;
+}@font-face {
+    font-family: 'cookiefont';
+    src: url(fonts/cookie_regular.TTF) format('truetype');
+    font-weight: normal;
 }
 
 body {
     font-family: cookiefont;
+    font-weight: bold;
     user-select: none; 
     overflow: hidden;
 }
@@ -53,6 +62,7 @@ body {
 .button {
     font-family: cookiefont;
     font-size:32px;
+    font-weight: bold;
     border: 0.15em solid black;
     border-radius: 0.5em;
     background-color: white;

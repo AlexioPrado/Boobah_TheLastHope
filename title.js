@@ -3,6 +3,15 @@ let scrolldown = document.getElementById('scrollDown');
 let scrollup = document.getElementById('scrollUp');
 var audio = new Audio('audio/minecraft_click.mp3')
 
+
+/* Linking pages
+let play = document.getElementById('play');
+play.onclick = function() {
+    window.open('https://alexioprado.github.io/Boobah_TheLastHope/guidebook.html');
+}
+*/
+
+
 scrolldown.onclick = function () {
     window.scrollTo({
         top: 2000,

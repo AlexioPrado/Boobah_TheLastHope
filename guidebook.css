@@ -104,6 +104,10 @@ strong {
     color: blue;
 }
 
+p {
+    margin-bottom: 0em;
+}
+
 table {
     border-color: black;
 }
