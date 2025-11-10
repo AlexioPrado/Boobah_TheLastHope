@@ -27,7 +27,7 @@ var background_audio = new Audio('audio/background/Takeshi Abo - KYOUHEI.mp3');
 
 document.addEventListener('mouseover', (event) => {
     background_audio.loop = true;
-    background_audio.volume = 0.1;
+    background_audio.volume = 0.05;
     background_audio.play();
 });
 

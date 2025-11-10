@@ -14,7 +14,7 @@ play.onclick = function() {
 
 document.addEventListener('mouseover', (event) => {
     background_audio.loop = true;
-    background_audio.volume = 0.1;
+    background_audio.volume = 0.05;
     background_audio.play();
 });
 
