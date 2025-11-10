@@ -2,6 +2,7 @@
 let scrolldown = document.getElementById('scrollDown');
 let scrollup = document.getElementById('scrollUp');
 var click = new Audio('audio/minecraft_click.mp3')
+var background_audio = new Audio("audio/Takeshi Abo - LEASE.mp3");
 
 
 /* Linking pages
@@ -10,6 +11,20 @@ play.onclick = function() {
     window.open('https://alexioprado.github.io/Boobah_TheLastHope/guidebook.html');
 }
 */
+
+document.addEventListener('mouseover', (event) => {
+    background_audio.loop = true;
+    background_audio.volume = 0.1;
+    background_audio.play();
+});
+
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) {
+    background_audio.pause();
+  } else {
+    background_audio.play()
+  }
+});
 
 
 scrolldown.onclick = function () {

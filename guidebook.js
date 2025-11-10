@@ -21,6 +21,21 @@ let creditsTitle = document.getElementById('info8');
 
 //Audio
 var click = new Audio('audio/minecraft_click.mp3')
+var background_audio = new Audio('audio/Takeshi Abo - KYOUHEI.mp3');
+
+document.addEventListener('mouseover', (event) => {
+    background_audio.loop = true;
+    background_audio.volume = 0.1;
+    background_audio.play();
+});
+
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) {
+    background_audio.pause();
+  } else {
+    background_audio.play()
+  }
+});
 
 boobah.onclick = function (){
     console.log('General Game Section');
