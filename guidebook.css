@@ -70,6 +70,7 @@ body {
     border-radius: 2vh;
     margin: 1em 1em 1em 0em;
     padding: 3%;
+    user-select: none; 
 }
 
 #contentList {
