@@ -7,6 +7,7 @@ let characterRoles = document.getElementById('characterRoles');
 let damageTypes = document.getElementById('damageTypes');
 let attributes = document.getElementById('attributes');
 let otherRules = document.getElementById('otherRules');
+let gameArea = document.getElementById('gameArea');
 let credits = document.getElementById('credits');
 
 //Titles of the Guidebook
@@ -17,7 +18,8 @@ let characterRolesTitle = document.getElementById('info4');
 let damageTypesTitle = document.getElementById('info5');
 let attributesTitle = document.getElementById('info6');
 let otherRulesTitle = document.getElementById('info7');
-let creditsTitle = document.getElementById('info8');
+let gameAreaTitle = document.getElementById('info8')
+let creditsTitle = document.getElementById('info9');
 
 //Audio
 var click = new Audio('audio/ui/minecraft_click.mp3')
@@ -70,6 +72,11 @@ attributes.onclick = function (){
 otherRules.onclick = function (){
     console.log('Other Rules Section');
     otherRulesTitle.scrollIntoView({behavior: "smooth", block: "center"});
+    click.play();
+}
+gameArea.onclick = function (){
+    console.log('Game Area Section');
+    gameAreaTitle.scrollIntoView({behavior: "smooth", block: "center"});
     click.play();
 }
 credits.onclick = function (){
