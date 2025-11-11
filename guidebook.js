@@ -89,5 +89,5 @@ credits.onclick = function (){
 let exit = document.getElementById('exit');
 
 exit.onclick = function (){
-    window.location.href = ("https://alexioprado.github.io/Boobah_TheLastHope/");
+    window.location.href = ("https://alexioprado.github.io/Boohbah_TheLastHope/");
 }

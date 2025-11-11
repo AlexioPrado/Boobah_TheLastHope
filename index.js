@@ -8,7 +8,7 @@ var background_audio = new Audio("audio/background/Takeshi Abo - LEASE.mp3");
 /* Linking pages*/
 let play = document.getElementById('play');
 play.onclick = function() {
-    window.location.href = ('https://alexioprado.github.io/Boobah_TheLastHope/guidebook.html');
+    window.location.href = ('https://alexioprado.github.io/Boohbah_TheLastHope/guidebook.html');
 }
 
 
