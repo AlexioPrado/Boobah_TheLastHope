@@ -85,10 +85,9 @@ credits.onclick = function (){
     click.play();
 }
 
-/* Linking pages
+
 let exit = document.getElementById('exit');
 
 exit.onclick = function (){
-    window.open("https://alexioprado.github.io/Boobah_TheLastHope/");
+    window.location.href = ("https://alexioprado.github.io/Boobah_TheLastHope/");
 }
-*/

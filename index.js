@@ -5,12 +5,12 @@ var click = new Audio('audio/ui/minecraft_click.mp3')
 var background_audio = new Audio("audio/background/Takeshi Abo - LEASE.mp3");
 
 
-/* Linking pages
+/* Linking pages*/
 let play = document.getElementById('play');
 play.onclick = function() {
-    window.open('https://alexioprado.github.io/Boobah_TheLastHope/guidebook.html');
+    window.location.href = ('https://alexioprado.github.io/Boobah_TheLastHope/guidebook.html');
 }
-*/
+
 
 document.addEventListener('mouseover', (event) => {
     background_audio.loop = true;
