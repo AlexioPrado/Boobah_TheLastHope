@@ -460,6 +460,8 @@ exit.onclick = function (){
 
 /* Filtering */
 
+//All cards
+let cards = document.getElementsByClassName('card');
 //role lists
 let tanks = document.getElementsByClassName('tank');
 let attacks = document.getElementsByClassName('attack');
@@ -471,10 +473,145 @@ let cybers = document.getElementsByClassName('cyber');
 
 //filter button
 let filter = document.getElementById('filter');
-//role buttons
-
+//Filter Overlay
+let filterOverlay = document.getElementById('filterOverlay')
 //attribute buttons
+let coderButton = document.getElementById('coderButton');
+let cyberButton = document.getElementById('cyberButton');
+let biotechButton = document.getElementById('biotechButton');
+//role buttons
+let attackButton = document.getElementById('attackButton');
+let tankButton = document.getElementById('tankButton');
+let supportButton = document.getElementById('supportButton');
+//Exclusive Button
+let exclusiveButton = document.getElementById('exclusiveButton');
 
+let attributeControl = {'coder': false, 'cyber': false, 'biotech': false}
+let roleControl = {'attack': false, 'tank': false, 'support': false}
+let exclusivity = false;
+let isFilter = false;
+
+filter.onclick = function () {
+  isFilter = !isFilter;
+  if (isFilter){
+    filterOverlay.style = 'display: flex;';
+  } else {
+    filterOverlay.style = 'display: none;';
+  }
+}
+
+exclusiveButton.onclick = function() {
+  exclusivity = !exclusivity;
+  buttonOutput(exclusivity, 'Exclusive', exclusiveButton);
+  filtering();
+}
+
+coderButton.onclick = function(){
+  attributeControl['coder'] = !attributeControl['coder'];
+  buttonOutput(attributeControl['coder'], 'Coder', coderButton);
+  filtering();
+}
+cyberButton.onclick = function(){
+  attributeControl['cyber'] = !attributeControl['cyber'];
+  buttonOutput(attributeControl['cyber'], 'Cyber', cyberButton);
+  filtering();
+}
+biotechButton.onclick = function(){
+  attributeControl['biotech'] = !attributeControl['biotech'];
+  buttonOutput(attributeControl['biotech'], 'Biotech', biotechButton);
+  filtering();
+}
+
+attackButton.onclick = function(){
+  roleControl['attack'] = !roleControl['attack'];
+  buttonOutput(roleControl['attack'], 'Attack', attackButton);
+  filtering();
+}
+tankButton.onclick = function(){
+  roleControl['tank'] = !roleControl['tank'];
+  buttonOutput(roleControl['tank'], 'Tank', tankButton);
+  filtering();
+}
+supportButton.onclick = function(){
+  roleControl['support'] = !roleControl['support'];
+  buttonOutput(roleControl['support'], 'Support', supportButton);
+  filtering();
+}
+
+function buttonOutput (status, name, element){
+  if (status){
+    element.style = 'background-color: rgb(111, 188, 255);';
+    console.log(name + ' Filter On');
+  } else {
+    element.style = 'background-color: rgb(255, 255, 255, 0.5);';
+    console.log(name + ' Filter Off');
+  }
+}
+
+function filtering (){
+  // Lists of attributes and roles selected
+  let attributeList = [];
+  let roleList = [];
+  // Add attributes that are selected
+  for (let [key, value] of Object.entries(attributeControl)){
+    if (value) {
+      attributeList.push(key);
+    }
+  }
+  // Add roles that are selected
+  for (let [key, value] of Object.entries(roleControl)){
+    if (value) {
+      roleList.push(key);
+    }
+  }
+
+  console.log(roleList)
+
+  // Card list to be displayed
+  let displayCards = []
+
+  // Cards filtered off by attribute
+  for (let i = 0; i < cards.length; i++){
+    //displays all cards if attribute list is empty
+    if (attributeList.length == 0){
+      cards[i].style = 'display: grid;';
+      continue;
+    }
+    // If the card has an attribute in the list, add to displayCards
+    for (let att of attributeList) {
+      if (cards[i].classList.contains(att)){
+        displayCards.push(cards[i])
+      } else {
+        cards[i].style = 'display: none;';
+      }
+    }
+  }
+
+  /*
+  if (exclusivity){
+    for (let i = 0; i < displayCards.length; i++){
+      if (roleList.length == 0){
+        displayCards[i].style = 'display: grid;';
+        continue;
+      }
+      for (let role of roleList) {
+        if (!displayCards[i].classList.contains(role)){
+          displayCards.splice(i, 1);
+          console.log(displayCards);
+          console.log('removed')
+        } else {
+          continue;
+        }
+      }
+    }
+  }
+  */
+  
+  for (let i = 0; i <displayCards.length; i++){
+    displayCards[i].style = 'display: grid;';
+  }
+
+}
 
 //role off/on
 let tankSwitch = false;
@@ -485,8 +622,7 @@ let coderSwitch = false;
 let biotechSwitch = false;
 let cyberSwitch = false;
 
-
-filter.onclick = function(){
+tankButton.onclick = function(){
   if (!tankSwitch){
 
     if (!attackSwitch){
