@@ -172,6 +172,8 @@ body {
     max-height: 100%;
     border-radius: 1.25em;
     object-fit: cover;
+    transition: transform 2s;
+    border: 0.5em solid black;
 }
 
 #contentList {
@@ -187,9 +189,19 @@ body {
 }
 
 #information {
-    background-color: rgb(228, 241, 255);
+    /*background-color: rgb(228, 241, 255);*/
+    background: linear-gradient(-45deg, #efefef 40%, #fafafa 50%, #efefef 60%);
+    background-size: 300%;
+    background-position-x: 100%;
+    animation: shimmer 1s infinite linear;
     border-radius: 1em;
     padding: 1em;
+}
+
+@keyframes shimmer {
+   to {
+      background-position-x: 0%
+   }
 }
 
 #name_health {
