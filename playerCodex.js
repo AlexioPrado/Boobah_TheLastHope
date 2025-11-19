@@ -17,6 +17,7 @@ document.addEventListener("visibilitychange", () => {
 
 const click = new Audio('audio/ui/minecraft_click.mp3');
 
+let title = document.getElementById('title');
 let characterImg = document.getElementById('infoCardImg');
 let characterName = document.getElementById('name');
 let hp = document.getElementById('health');
@@ -402,6 +403,9 @@ samuelCard.onclick = function(){
 
 // Main Function in displaying all information of the specified character
 function selectingCard (characterSheet){
+  //scroll to the top
+  title.scrollIntoView({behavior: "smooth", block: "center"})
+
   //Replace card image
   characterImg.src = characterSheet['imgURL'];
 
@@ -654,7 +658,7 @@ function filtering (){
     if (!exclusivity){
       //Filter through filteringOne
       for (let i = 0; i < filteringOne.length; i++){
-        // list roles a card has
+        // list roles a card has 
         let cardRoles = [];
         for (let g = 2; g < filteringOne[i].classList.length; g++){
           cardRoles.push(filteringOne[i].classList[g]);
@@ -673,16 +677,19 @@ function filtering (){
         }
       }
     } else {
+      //Filter through filteringOne
       for (let i = 0; i < filteringOne.length; i++){
         // list roles a card has
         let cardRoles = [];
         for (let g = 2; g < filteringOne[i].classList.length; g++){
           cardRoles.push(filteringOne[i].classList[g]);
         }
-
+        // loop through list of roles selected
         for (let role of roleList) {
+          // if the roles of a card is in the list of roles selected, add to filtertwo
           if (cardRoles.every(item => roleList.includes(item))) {
             filteringTwo.push(filteringOne[i]);
+          // display remove if not.
           } else {
             filteringOne[i].style = 'display: none';
           }
@@ -698,7 +705,6 @@ function filtering (){
 }
 
 /* General css styling*/
-
 for (let i = 0; i < coders.length; i++) {
   coders[i].children[0].style = 'border-color: rgb(0, 71, 171);';
 }
