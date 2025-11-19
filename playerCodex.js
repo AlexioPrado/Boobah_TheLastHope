@@ -161,7 +161,7 @@ const evanY = {'imgURL': 'cardImages/evanYango.png',
                'NA': ['Undecided', 'S', '2', '1', '<p>Deal 2 dmg to the enemy.</p>'],
                'SK': ['Undecided', 'A', '3', '2', '<p>Deal 2 dmg to all enemies.<br>If enemies are stunned, deal twice as much dmg.</p>'],
                'UL': ['Undecided', 'S', '3', '2', '3', '<p>Deal 5 dmg to the enemy.<br>If a character in the party loses or gains HP, increase the next Skill dmg by 2. (3 rounds)</p>']};
-const evelynM = {'imgURL': 'cardImages/evanYango.png',
+const evelynM = {'imgURL': 'cardImages/evelynMeier.png',
                  'Name': 'Evelyn Meier',
                  'HP': '50',
                  'Attribute': 'Cyber', 
@@ -185,7 +185,7 @@ const katarinaR = {'imgURL': 'cardImages/evanYango.png',
                    'NA': ['Undecided', 'S', '1', '1', '<p>Deal 1 dmg to the enemy.</p>'],
                    'SK': ['Undecided', 'D', '4', '1', '<p>Deal 3 dmg to the enemy and summon Fiesty Kat.<br><u>Fiesty Kat:</u> Heals 2 HP to the active character when they take an action and deals 2 dmg at the end of the round. (Thrice per round, 3 rounds)</p>'],
                    'UL': ['Undecided', 'D', '3', '2', '2', '<p>Deal 4 dmg to the enemy.<br>Summon <u>Fiesty Kat</u>. If already present, refresh duration.<br>Healing caused by <u>Fiesty kat</u> is increased by 2 HP.</p>']};
-const keshavT = {'imgURL': 'cardImages/evanYango.png',
+const keshavT = {'imgURL': 'cardImages/keshavTekalur.png',
                  'Name': 'Keshav Tekalur',
                  'HP': '25',
                  'Attribute': 'Biotech', 
@@ -265,6 +265,14 @@ const shamN = {'imgURL': 'cardImages/shamNemer.png',
                'NA': ['Not Worth My Time', 'S', '2', '1', '<p>Deal 2 dmg to the enemy.</p>'],
                'SK': ['"You alright ladies?"', 'S', '2', '2', '<p>Deal 3 dmg to the enemy.<br>When Sham is on standby, reduce dmg taken to the active character by 3. If Sham has atleast 20 HP, deal 2 dmg to herself. (Twice per round, 2 rounds)</p>'],
                'UL': ['Papichulo In The House!', 'N', '3', '0', '3', '<p>Place the Stunning Shield to the active character with strength based on Sham\'s HP.<br>For every 4 HP away from her Base HP, increase <u>Stunning Shield</u> strength by 3.</p>']};
+const sophiaS = {'imgURL': 'cardImages/sophiaSwart.png',
+                  'Name': 'Sophia Swart',
+                  'HP': '',
+                  'Attribute': '', 
+                  'Roles': [''], 
+                  'NA': ['Undecided', 'N', '0', '0', '<p></p>'],
+                  'SK': ['Undecided', 'N', '0', '0', '<p></p>'],
+                  'UL': ['Undecided', 'N', '0', '0', '0', '<p></p>']};
 const tanishkaP = {'imgURL': 'cardImages/evanYango.png',
                    'Name': 'Tanishka Peddy',
                    'HP': '25',
@@ -310,7 +318,8 @@ const rahulCard = document.getElementById('rahulMurgai');
 const saraCard = document.getElementById('saraReinert');
 const shamCard = document.getElementById('shamNemer');
 const tanishkaCard = document.getElementById('tanishkaPeddy');
-const samuelCard = document.getElementById('samuelTaiwo')
+const samuelCard = document.getElementById('samuelTaiwo');
+const sophiaCard = document.getElementById('sophiaSwart');
 
 //Starting page
 selectingCard(adamM);
@@ -393,13 +402,17 @@ saraCard.onclick = function(){
 shamCard.onclick = function(){
   selectingCard(shamN);
 }
+samuelCard.onclick = function(){
+  selectingCard(samuelT);
+}
+sophiaCard.onclick = function(){
+  selectingCard(sophiaS);
+}
 tanishkaCard.onclick = function(){
   selectingCard(tanishkaP);
 }
 
-samuelCard.onclick = function(){
-  selectingCard(samuelT);
-}
+
 
 // Main Function in displaying all information of the specified character
 function selectingCard (characterSheet){
