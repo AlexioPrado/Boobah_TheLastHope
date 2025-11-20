@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enemy Cards</title>
+    <link rel="stylesheet" href="enemyCodex.css">
+    <link rel="icon" type="image/png" href="tabIcons/Zingbah_render.ico">
+</head>
+<body>
+    <!--INSERT IMAGE FOR EXIT a-->
+    <div id="titlePanel">
+        <h3 id="title" style="font-size: 72px; margin: 0; color: rgb(228, 241, 255);">Enemy Cards</h3>
+    </div>
+    <div id="cardPanel">
+        <div id="cardDirectory">
+            <div id="cardContainer">
+                <div id="contentList">
+                    <section class="card " id="">
+                        <img class="cardImg" src="cardImages/evanYango.png">
+                        <h3 class="cardName"></p>
+                    </section>
+                </div>
+            </div>
+            
+            <div id="filterDirectory">
+                <div id="filterOverlay" style="display: none;">
+                    <div id="factionFilter">
+                        <p id="factionTitle">Faction</p>
+                        <button class='fFilter' id='boohbahButton'>Boohbah</button>
+                        <button class='fFilter' id='teacherButton'>Teacher</button>
+                        <button class='fFilter' id='magicalButton'>Magical</button>
+                    </div>
+                    <div id="verticalDivider"></div>
+                    <div id="roleFilter">
+                        <p id="roleTitle">Role</p>
+                        <button class='rFilter' id='attackButton'>Attack</button>
+                        <button class='rFilter' id='tankButton'>Tank</button>
+                        <button class='rFilter' id='supportButton'>Support</button>
+                        <button class='rFilter' id='exclusiveButton'>Exclusive</button>
+                    </div>
+                </div>
+                <button id="filter">Filter</button>
+            </div>
+            
+        </div>
+        <div id="infoContainer">
+            <img id="infoCardImg" src="cardImages/mandiNguyen.png">
+            <div id="information">
+                <div id="name_health" style="display: flex; margin-bottom: 0.5em;">
+                    <h1 id="name" style="margin: 0;">Adam Mitchell</h2>
+                    <h2 id="health" style="margin: 0;">HP: 40</h2>                    
+                </div>
+                <div id="faction_roles" style="display: flex;">
+                    <p class="faction" id="coder" style="display: none;">Coder</p>
+                    <p class="faction" id="cyber" style="display: none;">Cyber</p>
+                    <p class="faction" id="biotech">Biotech</p>
+                    <p class="roles" id="attack" style="display: none;">Attack</p>
+                    <p class="roles" id="tank">Tank</p>
+                    <p class="roles" id="support" style="display: none;">Support</p>
+                </div>
+                <h2 id="normalAttack">Normal Attack: ____</h2>
+                <div class="attackType" style="display: flex;">
+                    <p class="single NA" style="display: none;">Single-Target</p>
+                    <p class="aoe NA">AoE</p>
+                    <p class="dot NA" style="display: none;">DoT</p>
+                </div>
+                <div id="naInfo"></div>
+                <hr>
+                <h2 id="skill">Skill: ____</h2>
+                <div class="attackType" style="display: flex;">
+                    <p class="single SK" style="display: none;">Single-Target</p>
+                    <p class="aoe SK" style="display: none;">AoE</p>
+                    <p class="dot SK" style="display: none;">DoT</p>
+                </div>
+                <div id="skInfo"></div>
+                <hr>
+                <h2 id="ultimate">Ultimate: ____</h2>
+                <div class="attackType" style="display: flex;">
+                    <p class="single ULT" style="display: none;">Single-Target</p>
+                    <p class="aoe ULT" style="display: none;">AoE</p>
+                    <p class="dot ULT" style="display: none;">DoT</p>
+                </div>  
+                <div id="ultInfo"></div>     
+
+            </div>
+        </div>
+        <img id="exit" src="miscellaneous/exitButton.png">
+    </div>
+    <!--Linking Script-->
+    <script src="playerCodex.js"></script>
+</body>
+</html>
