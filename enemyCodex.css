@@ -229,7 +229,7 @@ body {
 #boohbah {
     border: 0.2rem solid rgb(255, 166, 166);
     background: linear-gradient(to right, rgb(255, 210, 125), rgb(255, 255, 123), rgb(255, 201, 210), rgb(175, 175, 255), rgb(255, 96, 255));
-    color: rgb(25, 25, 25);
+    color: rgb(0, 0, 0);
 }
 #teacher {
     border: 0.2rem solid rgb(255, 59, 59);
@@ -240,6 +240,11 @@ body {
     border: 0.2rem solid rgb(156, 209, 255);
     background-color: rgb(189, 224, 254);
     color: rgb(228, 241, 255);
+}
+#redacted {
+    border: 0.2rem solid rgb(167, 0, 0);
+    background-color: rgb(74, 0, 0);
+    color: rgb(255, 27, 27);
 }
 
 #attack {
